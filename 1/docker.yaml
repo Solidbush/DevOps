@@ -1,6 +1,6 @@
 ---
 - name: Установка Docker
-  hosts: all
+  hosts: app
   become: true
 
   tasks:
@@ -27,6 +27,7 @@
     - name: Обновление кеша пакетов
       apt:
         update_cache: yes
+        cache_valid_time: 3600
 
     - name: Установка Docker
       apt:
