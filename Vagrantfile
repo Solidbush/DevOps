@@ -4,7 +4,7 @@ Vagrant.configure("2") do |config|
   # Количество требуемых машин
   SERVERS = 2
   # Имя сетевого интерфейса для организации моста
-  BRIDGE = "Realtek PCIe GbE Family Controller"
+  BRIDGE = "Realtek Gaming 2.5GbE Family Controller"
 
   def create_host(config, hostname, ip)
     config.vm.define hostname do |host|

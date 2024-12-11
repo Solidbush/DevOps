@@ -1,4 +1,5 @@
 .idea/
 focal64.box
 .vagrant/
-*/roles/
+.roles/
+venv/
