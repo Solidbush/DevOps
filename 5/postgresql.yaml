@@ -1,0 +1,23 @@
+---
+
+- name: "Настройка Master"
+  hosts: master
+  become: true
+
+  tasks:
+    - name: "Включить роль postgresql для master"
+      include_role:
+        name: postgresql
+      vars:
+        postgresql_role: master
+
+- name: "Настройка Replica"
+  hosts: replica
+  become: true
+
+  tasks:
+    - name: "Включить роль postgresql для replica"
+      include_role:
+        name: postgresql
+      vars:
+        postgresql_role: replica
